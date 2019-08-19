@@ -44,6 +44,6 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "test": "jest",
     "build": "tsc",
-    "release": "standard-version --commit-all"
+    "release": "standard-version"
   }
 }
