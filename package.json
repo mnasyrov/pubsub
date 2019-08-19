@@ -1,0 +1,49 @@
+{
+  "name": "@mnasyrov/pubsub",
+  "description": "Simple PubSub implementation for Typescript",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": {
+    "name": "Mikhail Nasyrov",
+    "email": "mikhail@mnasyrov.com",
+    "url": "https://mnasyrov.com"
+  },
+  "homepage": "https://github.com/mnasyrov/pubsub",
+  "bugs": "https://github.com/mnasyrov/pubsub/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mnasyrov/pubsub.git"
+  },
+  "keywords": [
+    "pubsub",
+    "typescript",
+    "simple",
+    "emitter"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "tslib": "^1.9.0"
+  },
+  "devDependencies": {
+    "@types/jest": "24.0.17",
+    "jest": "24.9.0",
+    "prettier": "1.18.2",
+    "standard-version": "7.0.0",
+    "ts-jest": "24.0.2",
+    "tslib": "1.10.0",
+    "tslint": "5.18.0",
+    "tslint-config-prettier": "1.18.0",
+    "typescript": "3.4.5"
+  },
+  "scripts": {
+    "clean": "rm -rf build dist",
+    "lint": "npm run lint:prettier && npm run lint:tslint",
+    "lint:prettier": "prettier --list-different \"src/**/*.ts\"",
+    "lint:tslint": "tslint \"src/**/*.ts\"",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "test": "jest",
+    "build": "tsc",
+    "release": "standard-version --commit-all"
+  }
+}

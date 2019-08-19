@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "11"
+
+install:
+  - npm install
+
+script:
+  - npm clean
+  - npm lint
+  - npm test
+  - npm build
