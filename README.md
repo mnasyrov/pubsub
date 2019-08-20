@@ -3,7 +3,7 @@
 _Simple PubSub implementation for Typescript._
 
 [![npm version](https://badge.fury.io/js/%40mnasyrov%2Fpubsub.svg)](https://www.npmjs.com/@mnasyrov/pubsub)
-[![build Status](https://travis-ci.org/mnasyrov/pubsub.svg?branch=master)](https://travis-ci.org/mnasyrov/pubsub)
+[![Actions Status](https://github.com/mnasyrov/pubsub/workflows/build/badge.svg)](https://github.com/mnasyrov/pubsub/actions)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 ## Usage

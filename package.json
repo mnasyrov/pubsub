@@ -16,9 +16,8 @@
   },
   "keywords": [
     "pubsub",
-    "typescript",
-    "simple",
-    "emitter"
+    "emitter",
+    "typescript"
   ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -44,6 +43,7 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "test": "jest",
     "build": "tsc",
-    "release": "standard-version"
+    "release": "standard-version",
+    "publish": "npm publish --access=public"
   }
 }
