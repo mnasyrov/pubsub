@@ -1,6 +1,6 @@
 # Simple PubSub
 
-_Simple PubSub for Typescript. Implements Publisher/Subscriber pattern. Provides a value emitter, subscription and consumer interface._
+_Implements Publisher/Subscriber pattern. Provides a value emitter, subscription and consumer interface. Supports Typescript._
 
 [![npm version](https://badge.fury.io/js/%40mnasyrov%2Fpubsub.svg)](https://www.npmjs.com/@mnasyrov/pubsub)
 [![Actions Status](https://github.com/mnasyrov/pubsub/workflows/build/badge.svg)](https://github.com/mnasyrov/pubsub/actions)
