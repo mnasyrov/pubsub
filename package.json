@@ -20,8 +20,8 @@
     "typescript"
   ],
   "main": "dist/umd/pubsub.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "module": "dist/pubsub.js",
+  "types": "dist/pubsub.d.ts",
   "dependencies": {
     "tslib": "^1.9.0"
   },
