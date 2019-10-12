@@ -14,7 +14,7 @@ Install dependencies:
 $ npm install --save @mnasyrov/pubsub
 ```
 
-Use a value emitter:
+Create an emitter and publish a value to consumers:
 
 ```typescript
 import {Emitter} from '@mnasyrov/pubsub';
@@ -51,20 +51,17 @@ export interface Publisher<T> {
 export interface Emitter<T> {
   constructor();
 
-  /** Returns true in case there is a subscriber. */
-  readonly isSubscribed: boolean;
-
-  /** Returns a count of subscribers. */
+  /** A number of subscribed consumers. */
   readonly size: number;
 
-  /** Subscribes a consumer for future values. */
+  /** Subscribes a consumer of values. */
   subscribe(consumer: Consumer<T>): Subscription;
 
-  /** Emits a value to all subscribers. */
+  /** Emits a value to subscribed consumers. */
   emit(value: T);
 
-  /** Unsubscribes all subscribed consumers. */
-  dispose();
+  /** Removes all subscribed consumers. */
+  clear();
 }
 ```
 

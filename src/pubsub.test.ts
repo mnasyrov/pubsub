@@ -5,12 +5,12 @@ describe('class Emitter', () => {
     it('should return true in case there is a subscriber', () => {
       const emitter = new Emitter();
       emitter.subscribe(() => {});
-      expect(emitter.isSubscribed).toBe(true);
+      expect(emitter.size).toBe(1);
     });
 
     it('should return false in case there is no subscribers', () => {
       const emitter = new Emitter();
-      expect(emitter.isSubscribed).toBe(false);
+      expect(emitter.size).toBe(0);
     });
 
     it('should return false in case there were subscribers', () => {
@@ -20,7 +20,7 @@ describe('class Emitter', () => {
       const sub2 = emitter.subscribe(() => {});
       sub1.unsubscribe();
       sub2.unsubscribe();
-      expect(emitter.isSubscribed).toBe(false);
+      expect(emitter.size).toBe(0);
     });
   });
 
@@ -120,9 +120,8 @@ describe('class Emitter', () => {
       emitter.subscribe(value => (futureValue2 = value));
       emitter.emit(1);
 
-      emitter.dispose();
+      emitter.clear();
       emitter.emit(2);
-      expect(emitter.isSubscribed).toBe(false);
       expect(emitter.size).toBe(0);
       expect(futureValue1).toBe(1);
       expect(futureValue2).toBe(1);
@@ -130,13 +129,13 @@ describe('class Emitter', () => {
 
     it('should not fail in case there are no subscribers', () => {
       const emitter = new Emitter<number>();
-      emitter.dispose();
+      emitter.clear();
     });
 
     it('should allow to unsubscribe a disposed subscription', () => {
       const emitter = new Emitter();
       const sub1 = emitter.subscribe(() => {});
-      emitter.dispose();
+      emitter.clear();
       sub1.unsubscribe();
     });
   });

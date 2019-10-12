@@ -20,17 +20,12 @@ export class Emitter<T> implements Publisher<T> {
     this.consumers = new Map<object, Consumer<T>>();
   }
 
-  /** Returns true in case there is a subscriber */
-  get isSubscribed(): boolean {
-    return this.consumers.size > 0;
-  }
-
-  /** Returns a count of subscribers */
+  /** A number of subscribed consumers. */
   get size(): number {
     return this.consumers.size;
   }
 
-  /** Subscribes a consumer for future values */
+  /** Subscribes a consumer of values. */
   subscribe(consumer: Consumer<T>): Subscription {
     if (!consumer) {
       return EMPTY_SUBSCRIPTION;
@@ -40,7 +35,7 @@ export class Emitter<T> implements Publisher<T> {
     return new EmitterSubscription(this.consumers, consumerKey);
   }
 
-  /** Emits a value to all subscribers */
+  /** Emits a value to subscribed consumers. */
   emit(value: T) {
     if (this.consumers.size === 0) {
       return;
@@ -48,8 +43,8 @@ export class Emitter<T> implements Publisher<T> {
     this.consumers.forEach(consumer => consumer(value));
   }
 
-  /** Unsubscribes all subscribed consumers */
-  dispose() {
+  /** Removes all subscribed consumers. */
+  clear() {
     this.consumers.clear();
     this.consumers = new Map<object, Consumer<T>>();
   }
