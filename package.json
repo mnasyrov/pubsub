@@ -45,6 +45,8 @@
     "test": "jest",
     "build": "tsc && tsc --outDir dist/umd/ --module umd",
     "release": "standard-version",
+    "release-minor": "standard-version --release-as minor",
+    "release-patch": "standard-version --release-as patch",
     "prepublishOnly": "npm run clean && npm run lint && npm run test && npm run build",
     "do-publish": "npm publish --access public"
   }
