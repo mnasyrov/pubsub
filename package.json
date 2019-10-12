@@ -1,7 +1,7 @@
 {
   "name": "@mnasyrov/pubsub",
   "description": "Simple PubSub implementation for Typescript",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "license": "MIT",
   "author": {
     "name": "Mikhail Nasyrov",
