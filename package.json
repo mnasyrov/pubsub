@@ -40,7 +40,11 @@
     "tslint-config-prettier": "1.18.0",
     "typescript": "3.4.5"
   },
+  "resolutions": {
+    "typescript": "3.4.5"
+  },
   "scripts": {
+    "preinstall": "npx -p npm-force-resolutions@0.0.3 npm-force-resolutions",
     "clean": "rm -rf build dist",
     "lint": "npm run lint:prettier && npm run lint:tslint",
     "lint:prettier": "prettier --list-different \"src/**/*.ts\"",
