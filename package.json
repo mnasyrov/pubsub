@@ -22,7 +22,7 @@
   "source": "src/pubsub.ts",
   "types": "dist/pubsub.d.ts",
   "main": "dist/pubsub.js",
-  "module": "dist/pubsub.mjs",
+  "module": "dist/pubsub.module.js",
   "umd:main": "dist/pubsub.umd.js",
   "unpkg": "dist/pubsub.umd.js",
   "dependencies": {
@@ -51,7 +51,7 @@
     "lint:tslint": "tslint \"src/**/*.ts\"",
     "format": "prettier --write \"src/**/*.ts\"",
     "test": "jest",
-    "build": "microbundle --name pubsub",
+    "build": "microbundle --name pubsub --sourcemap false --no-compress",
     "release": "standard-version",
     "release-minor": "standard-version --release-as minor",
     "release-patch": "standard-version --release-as patch",
