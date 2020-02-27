@@ -35,7 +35,6 @@
     "prettier": "1.18.2",
     "standard-version": "7.0.0",
     "ts-jest": "24.0.2",
-    "tslib": "1.10.0",
     "tslint": "5.18.0",
     "tslint-config-prettier": "1.18.0",
     "typescript": "3.6.4"
@@ -44,7 +43,6 @@
     "typescript": "3.6.4"
   },
   "scripts": {
-    "preinstall": "npx -p npm-force-resolutions@0.0.3 npm-force-resolutions",
     "clean": "rm -rf build dist",
     "lint": "npm run lint:prettier && npm run lint:tslint",
     "lint:prettier": "prettier --list-different \"src/**/*.ts\"",
